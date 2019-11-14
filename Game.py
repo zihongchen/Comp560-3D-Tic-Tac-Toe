@@ -387,21 +387,12 @@ def evaluate(board):
     if np.all(board!=0) and winner==0:
         winner=-1
     return winner
-def play_game():
+def play_game_randomly():
     board,winner,counter=create_board(),0,1
     while winner==0:
         for player in [1,2]:
             board=random_place(board,player)
             counter=counter+1
             winner=evaluate(board)
-            if winner!=0:
-                if winner==1 or winner==2:
-                    print("the winner is player ",winner,"after",counter,"tries")
-                    print("Te final board is")
-                    print(board)
-                    positionwinner(board,winner)
-                else:
-                    print("there is a draw")
-                break
-    return winner        
+    return winner,board,counter        
 
