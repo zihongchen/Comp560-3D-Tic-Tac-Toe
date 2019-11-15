@@ -5,7 +5,7 @@
 Our project is not on master branch!!
 Our functions are on functions.py and learning.py and game.py
 You could see our result in the jupiter file playground.
-To run our program from shell, see run.py
+To run our program from shell, excute Playground.py in terminal
 
 
 
