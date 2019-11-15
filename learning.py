@@ -46,7 +46,8 @@ def learning_randomly_4x4x4(iterations1,iterations2,iterations3):
     Utility3=utilityArray        
     print("Utility fuction learning randomly with",iterations3,"iterations:")
     print(Utility3)
-    
+
+#reuturn an array of positions-(i,j,k)- on the board that is not taken 
 def availablePositions(board):
         positions = []
         N=len(board)
@@ -56,7 +57,7 @@ def availablePositions(board):
                     if board[i, j,k] == 0:
                         positions.append((i, j, k))  # need to be tuple
         return positions
-
+#
 def utility_place(board,player,utilityArray,exp_rate): 
     positions=availablePositions(board)
     if np.random.uniform(0, 1) <= exp_rate:
@@ -99,7 +100,7 @@ def play_gameWithUtility(utilityArray):
                 
     return winner 
 
-def learning_with_exploration(iterations1,iterations2,iterations3): 
+def learning_with_exploration_and_exploitation(iterations1,iterations2,iterations3): 
     utilityArray=create_board()
     Utility1=create_board()
     Utility2=create_board()
