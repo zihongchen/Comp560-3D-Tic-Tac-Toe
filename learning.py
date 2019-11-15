@@ -74,6 +74,10 @@ def utility_place(board,player,utilityArray,exp_rate):
             if utilityArray[i]>maxValue:
                 maxValue=utilityArray[i]#find the current available position with the biggest utility value
                 valueIndex=i
+            if utilityArray[i]==maxValue:
+                if np.random.uniform(0, 1) <= 0.5:
+                    maxValue=utilityArray[i]
+                    valueIndex=i           
         board[i]=player
         #actionList.append(i)
         return board
