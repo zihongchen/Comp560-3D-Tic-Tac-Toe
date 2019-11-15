@@ -65,3 +65,5 @@ This is the utility array two rounds later.
  
 The player now would value squares with the utility value 3 more than the square value with -2 for 70% of the time. For the other 30% of the time, it would choose randomly.
 
+However, this method doesn’t perform well without potential row or column checker. To get a truly intelligent agent, we have to use either Q-learning or temporal difference to do the utility update instead of just adding one. However, that means we have to keep track of the state space, in 4x4x4 tic tac toe. We plan to do it, but we are running out of the time. 
+
